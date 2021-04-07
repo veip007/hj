@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.0.6"
+sh_ver="2.0.7"
 
 
 
@@ -37,7 +37,7 @@ Install_V2ray(){
 }
 #6安装Tg专用代理
 Tg_socks(){
-	bash <(curl -s -L https://raw.githubusercontent.com/veip007/doubi/master/mtproxy_go.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/veip007/mtg-dist/master/install.sh)
 }
 #7安装Goflyway
 Install_goflyway(){
