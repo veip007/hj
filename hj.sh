@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.0.7"
+sh_ver="2.0.8"
 
 
 
@@ -64,35 +64,19 @@ DD_OD(){
 DD_GD(){
 	bash <(curl -s -L https://raw.githubusercontent.com/veip007/dd/master/dd-gd.sh)
 }
-#13Curl安装(debian)
-Install_curl(){
-	apt-get install curl
+#13一键开启默认bbr
+open_bbr(){
+	modprobe tcp_bbr && echo "tcp_bbr" | tee --append /etc/modules-load.d/modules.conf && echo "net.core.default_qdisc=fq" | tee --append /etc/sysctl.conf && echo "net.ipv4.tcp_congestion_control=bbr" | tee --append /etc/sysctl.conf && sysctl -p && sysctl net.ipv4.tcp_available_congestion_control && sysctl net.ipv4.tcp_congestion_control && lsmod | grep bbr
 }
-#14Vim安装(debian)
-Install_Vim(){
-	apt-get install vim-gtk
-}
-#15更改root密码
-root_passwd(){
-	passwd root
-}
-#16wget安装(debian)
-Install_wget(){
-	apt-get install wget
-}	
-#17更新系统源 (debian)
-Install_update(){
-	apt-get update	
-}
-#18改ls颜色(debian)
+#14改ls颜色(debian)
 ls_color(){
 	wget https://raw.githubusercontent.com/veip007/hj/master/bashrc && mv /root/bashrc /root/.bashrc
 }
-#19 Netflix解锁检测
+#15 Netflix解锁检测
 netflix(){
 bash <(curl -sSL "https://github.com/veip007/Netflix_Unlock_Information/raw/main/netflix.sh")	
 }
-#20 xray
+#16 xray
 xray(){
 bash <(curl -sSL "https://raw.githubusercontent.com/veip007/scripts/master/xray.sh")	
 }
@@ -126,20 +110,16 @@ echo && echo -e "
  ${Green_font_prefix}11.${Font_color_suffix} 傻瓜式一键DD包（OD源）
  ${Green_font_prefix}12.${Font_color_suffix} 傻瓜式一键DD包（GD源）
  ——————————————————
- ${Green_font_prefix}13.${Font_color_suffix} Curl安装(debian)  
- ${Green_font_prefix}14.${Font_color_suffix} Vim安装(debian)  
- ${Green_font_prefix}15.${Font_color_suffix} 更改root密码  
- ${Green_font_prefix}16.${Font_color_suffix} wget安装(debian)  
- ${Green_font_prefix}17.${Font_color_suffix} 更新系统源 (debian)
- ${Green_font_prefix}18.${Font_color_suffix} 改ls颜色(debian)
+ ${Green_font_prefix}13.${Font_color_suffix} 一键开启默认bbr  
+ ${Green_font_prefix}14.${Font_color_suffix} 改ls颜色(debian)
  ——————————————————
- ${Green_font_prefix}19.${Font_color_suffix} Netflix解锁检测
- ${Green_font_prefix}20.${Font_color_suffix} xray安装 
+ ${Green_font_prefix}15.${Font_color_suffix} Netflix解锁检测
+ ${Green_font_prefix}16.${Font_color_suffix} xray安装 
   " && echo
 
 fi
 echo
-read -e -p " 请输入数字 [0-20]:" num
+read -e -p " 请输入数字 [0-16]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -181,30 +161,18 @@ case "$num" in
 	DD_GD
 	;;
 	13)
-	Install_curl
+	open_bbr
 	;;
 	14)
-	Install_Vim
-	;;
-	15)
-	root_passwd
-	;;
-	16)
-	Install_wget
-	;;
-	17)
-	Install_update
-	;;
-	18)
 	ls_color
 	;;
-	19)
+	15)
 	netflix	
 	;;
-	20)
+	16)
 	xray	
 	;;
 	*)
-	echo "请输入正确数字 [0-20]"
+	echo "请输入正确数字 [0-16]"
 	;;
 esac
