@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.0.8"
+sh_ver="2.0.9"
 
 
 
@@ -50,7 +50,7 @@ View_superbench(){
 
 #9回程线路测试
 View_huicheng(){
-	bash <(curl -s -L https://raw.githubusercontent.com/veip007/huicheng/master/huicheng)
+	wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/huicheng/master/huicheng && chmod +x huicheng
 }
 #10安装云监控
 Install_status(){
