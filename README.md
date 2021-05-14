@@ -12,7 +12,7 @@ wget https://raw.githubusercontent.com/veip007/hj/master/speed.zip && unzip spee
 
 # Nginx守护
 ```bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/hj/master/hj.sh && chmod +x hj.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/hj/master/ng.sh && chmod +x ng.sh
 ```
 ```
 crontab -e
