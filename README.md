@@ -12,9 +12,6 @@ wget https://raw.githubusercontent.com/veip007/hj/master/speed.zip && unzip spee
 
 # Nginx守护
 ```bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/hj/master/ng.sh && chmod +x ng.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/hj/master/ng.sh && chmod +x ng.sh && crontab -l > conf && echo "*/1 * * * * ./ng.sh" >> conf && crontab conf && rm -f conf 
 ```
-```
-crontab -e
-*/1 * * * * bash /root/ng.sh
-```
+
