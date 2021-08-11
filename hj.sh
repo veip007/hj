@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.0.9"
+sh_ver="2.0.10"
 
 
 
@@ -80,6 +80,10 @@ bash <(curl -sSL "https://github.com/veip007/Netflix_Unlock_Information/raw/main
 xray(){
 bash <(curl -sSL "https://raw.githubusercontent.com/veip007/scripts/master/xray.sh")	
 }
+#17 Nginx进程守护
+Nginx(){
+wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/hj/master/ng.sh && chmod +x ng.sh && crontab -l > conf && echo "*/1 * * * * ./ng.sh" >> conf && crontab conf && rm -f conf 	
+}
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -115,6 +119,7 @@ echo && echo -e "
  ——————————————————
  ${Green_font_prefix}15.${Font_color_suffix} Netflix解锁检测
  ${Green_font_prefix}16.${Font_color_suffix} xray安装 
+ ${Green_font_prefix}17.${Font_color_suffix} Nginx进程守护 
   " && echo
 
 fi
@@ -172,7 +177,10 @@ case "$num" in
 	16)
 	xray	
 	;;
+	17)
+	Nginx	
+	;;
 	*)
-	echo "请输入正确数字 [0-16]"
+	echo "请输入正确数字 [0-17]"
 	;;
 esac
