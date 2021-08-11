@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.0.10"
+sh_ver="2.0.11"
 
 
 
@@ -124,7 +124,7 @@ echo && echo -e "
 
 fi
 echo
-read -e -p " 请输入数字 [0-16]:" num
+read -e -p " 请输入数字 [0-17]:" num
 case "$num" in
 	0)
 	Update_Shell
