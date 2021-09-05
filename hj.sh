@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.0.11"
+sh_ver="2.0.12"
 
 
 
@@ -23,9 +23,9 @@ bbr_ruisu(){
 Google_bbr2(){
 	bash <(curl -s -L https://raw.githubusercontent.com/yeyingorg/bbr2.sh/master/bbr2.sh)
 }
-#3安装KCPtun
-Kcptun(){
-	bash <(curl -s -L https://github.com/veip007/Kcptun/raw/master/kcptun/kcptun.sh)
+#3安装Aria2
+Aria2(){
+	bash <(curl -s -L https://raw.githubusercontent.com/veip007/doubi/master/aria2.sh)
 }
 #4安装SSR多用户版
 Install_ssr(){
@@ -101,7 +101,7 @@ echo && echo -e "
  ——————————————————
  ${Green_font_prefix} 1.${Font_color_suffix} 加速系列：Bbr系列、锐速
  ${Green_font_prefix} 2.${Font_color_suffix} 安装谷歌 BBR2 BBRV2
- ${Green_font_prefix} 3.${Font_color_suffix} 安装KCPtun
+ ${Green_font_prefix} 3.${Font_color_suffix} 安装Aria2
  ${Green_font_prefix} 4.${Font_color_suffix} 安装SSR多用户版
  ——————————————————
  ${Green_font_prefix} 5.${Font_color_suffix} 安装V2ary_233一键
@@ -136,7 +136,7 @@ case "$num" in
 	Google_bbr2
 	;;
 	3)
-	Kcptun
+	Aria2
 	;;
 	4)
 	Install_ssr
