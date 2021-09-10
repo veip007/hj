@@ -15,3 +15,14 @@ wget https://raw.githubusercontent.com/veip007/hj/master/speed.zip && unzip spee
 wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/hj/master/ng.sh && chmod +x ng.sh && crontab -l > conf && echo "*/1 * * * * ./ng.sh" >> conf && crontab conf && rm -f conf 
 ```
 
+### Linux下载M3U8
+先安装ffmpeg
+```
+update && aptapt install -y ffmpeg
+```
+
+使用方法：
+```
+ffmpeg -i https://http://example.com/index.m3u8 -c:v copy abc.mp4
+```
+自行更改连接和文件名
