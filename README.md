@@ -33,8 +33,11 @@ ffmpeg -i https://http://example.com/index.m3u8 -c:v copy abc.mp4
 wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/hj/master/htpasswd.sh && chmod +x htpasswd.sh && ./htpasswd.sh
 ```
 依次输入用户名、密码、文件名称
+
 文件默认保存在root目录
+
 2.把生成的文件复制到要加密的文件夹下
+
 3.更改nginx的server配置文件
 ```
     location /zb {
