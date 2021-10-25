@@ -44,7 +44,11 @@ if ($.isNode()) {
 }
 let wantProduct = ``;//心仪商品名称
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
-const inviteCodes = ['T006-KgqAACjVWnYaS5kRrbA', 'T0225KkcRBsd_VOCdhjxwPNfJgCjVWnYaS5kRrbA', 'T020-akNFVdOqiO-VX6yw5FpCjVWnYaS5kRrbA', 'T020ufh2QRoY_VXKJRj8kPULCjVWnYaS5kRrbA','T012uf90SRkd81TTCjVWnYaS5kRrbA'];
+const inviteCodes = [
+  'T006-KgqAACjVWnYaS5kRrbA@T0225KkcRBsd_VOCdhjxwPNfJgCjVWnYaS5kRrbA@T020-akNFVdOqiO-VX6yw5FpCjVWnYaS5kRrbA@T020ufh2QRoY_VXKJRj8kPULCjVWnYaS5kRrbA@T012uf90SRkd81TTCjVWnYaS5kRrbA',
+  'T006-KgqAACjVWnYaS5kRrbA@T0225KkcRBsd_VOCdhjxwPNfJgCjVWnYaS5kRrbA@T020-akNFVdOqiO-VX6yw5FpCjVWnYaS5kRrbA@T020ufh2QRoY_VXKJRj8kPULCjVWnYaS5kRrbA@T012uf90SRkd81TTCjVWnYaS5kRrbA',
+  'T006-KgqAACjVWnYaS5kRrbA@T0225KkcRBsd_VOCdhjxwPNfJgCjVWnYaS5kRrbA@T020-akNFVdOqiO-VX6yw5FpCjVWnYaS5kRrbA@T020ufh2QRoY_VXKJRj8kPULCjVWnYaS5kRrbA@T012uf90SRkd81TTCjVWnYaS5kRrbA',
+]
 !(async () => {
   await requireConfig();
   if (!cookiesArr[0]) {
