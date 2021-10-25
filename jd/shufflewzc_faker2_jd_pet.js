@@ -10,7 +10,7 @@
 
 =================================Quantumultx=========================
 [task_local]
-#东东萌宠
+#东东萌宠 
 15 6-18/6 * * * jd_pet.js, tag=东东萌宠, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdmc.png, enabled=true
 
 =================================Loon===================================
