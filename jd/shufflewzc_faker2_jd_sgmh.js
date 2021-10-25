@@ -9,7 +9,7 @@
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
 [task_local]
-#闪购盲盒
+#闪购盲盒 
 20 8 * * * https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_sgmh.js, tag=闪购盲盒, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 ================Loon==============
 [Script]
