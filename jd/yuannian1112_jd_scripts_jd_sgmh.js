@@ -13,7 +13,7 @@
 20 8 * * * jd_sgmh.js, tag=闪购盲盒, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 
 ================Loon==============
-[Script]
+[Script] 
 cron "20 8 * * *" script-path=jd_sgmh.js, tag=闪购盲盒
 
 ===============Surge=================
