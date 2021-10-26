@@ -24,9 +24,9 @@ const jdCookieNode = $.isNode() ? require("./jdCookie.js") : "";
 const notify = $.isNode() ? require('./sendNotify') : "";
 let cookiesArr = [], cookie = "", allMessage = "", message;
 const inviteCodes = [
-  `T0225KkcRh9P9FbRKUygl_UJcgCjVfnoaW5kRrbA@T0159KUiH11Mq1bSKBoCjVfnoaW5kRrbA`,
-  `T0225KkcRh9P9FbRKUygl_UJcgCjVfnoaW5kRrbA@T0159KUiH11Mq1bSKBoCjVfnoaW5kRrbA`,
-  `T0225KkcRh9P9FbRKUygl_UJcgCjVfnoaW5kRrbA@T0159KUiH11Mq1bSKBoCjVfnoaW5kRrbA`,
+  `T006-KgqAACjVfnoaW5kRrbA@T0225KkcRBsd_VOCdhjxwPNfJgCjVfnoaW5kRrbA@T020-akNFVdOqiO-VX6yw5FpCjVfnoaW5kRrbA@T020ufh2QRoY_VXKJRj8kPULCjVfnoaW5kRrbA@T012uf90SRkd81TTCjVfnoaW5kRrbA`,
+  `T006-KgqAACjVfnoaW5kRrbA@T0225KkcRBsd_VOCdhjxwPNfJgCjVfnoaW5kRrbA@T020-akNFVdOqiO-VX6yw5FpCjVfnoaW5kRrbA@T020ufh2QRoY_VXKJRj8kPULCjVfnoaW5kRrbA@T012uf90SRkd81TTCjVfnoaW5kRrbA`,
+  `T006-KgqAACjVfnoaW5kRrbA@T0225KkcRBsd_VOCdhjxwPNfJgCjVfnoaW5kRrbA@T020-akNFVdOqiO-VX6yw5FpCjVfnoaW5kRrbA@T020ufh2QRoY_VXKJRj8kPULCjVfnoaW5kRrbA@T012uf90SRkd81TTCjVfnoaW5kRrbA`,
 ]
 let reward = $.isNode() ? (process.env.JD_HEALTH_REWARD_NAME ? process.env.JD_HEALTH_REWARD_NAME : '') : ($.getdata('JD_HEALTH_REWARD_NAME') ? $.getdata('JD_HEALTH_REWARD_NAME') : '');
 const randomCount = $.isNode() ? 20 : 5;
