@@ -26,6 +26,6 @@ cd /ql/scripts && wget https://raw.githubusercontent.com/veip007/hj/main/jd/yuan
 # 闪购盲盒
 cd /ql/scripts && rm yuannian1112_jd_scripts_jd_sgmh.js shufflewzc_faker2_jd_sgmh.js 
 cd /ql/scripts && wget https://raw.githubusercontent.com/veip007/hj/main/jd/yuannian1112_jd_scripts_jd_sgmh.js 
-
-
-wget https://raw.githubusercontent.com/veip007/hj/main/qlzlm.sh -O
+# 京喜财富岛
+cd /ql/scripts && rm he1pu_JDHelp_jd_cfd.js 
+cd /ql/scripts && wget https://raw.githubusercontent.com/veip007/hj/main/jd/he1pu_JDHelp_jd_cfd.js
