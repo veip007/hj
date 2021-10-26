@@ -28,4 +28,4 @@ cd /ql/scripts && rm yuannian1112_jd_scripts_jd_sgmh.js shufflewzc_faker2_jd_sgm
 cd /ql/scripts && wget https://raw.githubusercontent.com/veip007/hj/main/jd/yuannian1112_jd_scripts_jd_sgmh.js 
 
 
-rm qlzlm.sh && wget https://raw.githubusercontent.com/veip007/hj/main/qlzlm.sh
+wget https://raw.githubusercontent.com/veip007/hj/main/qlzlm.sh -O qlzlm.sh && chmod +x qlzlm.sh
