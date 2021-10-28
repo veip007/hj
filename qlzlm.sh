@@ -13,7 +13,7 @@ cd /ql/scripts && rm yuannian1112_jd_scripts_jd_dreamFactory.js shufflewzc_faker
 cd /ql/scripts && wget https://raw.githubusercontent.com/veip007/hj/main/jd/yuannian1112_jd_scripts_jd_dreamFactory.js 
 # 东东农场
 cd /ql/scripts && rm yuannian1112_jd_scripts_jd_fruit.js shufflewzc_faker2_jd_fruit.js 
-cd /ql/scripts && wget https://raw.githubusercontent.com/veip007/hj/main/jd/yuannian1112_jd_scripts_jd_fruit.js
+cd /ql/scripts && wget https://raw.githubusercontent.com/veip007/hj/main/jd/shufflewzc_faker2_jd_fruit.js
 # 东东健康社区
 cd /ql/scripts && rm yuannian1112_jd_scripts_jd_health.js shufflewzc_faker2_jd_health.js 
 cd /ql/scripts && wget https://raw.githubusercontent.com/veip007/hj/main/jd/yuannian1112_jd_scripts_jd_health.js 
