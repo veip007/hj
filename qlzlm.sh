@@ -4,7 +4,7 @@ rm /ql/scripts/shufflewzc_faker2/jd_jdfactory.js && wget -O /ql/scripts/yuannian
 # 口袋书店
 wget -O /ql/scripts/shufflewzc_faker2/jd_bookshop.js https://raw.githubusercontent.com/veip007/hj/main/jd/shufflewzc_faker2/jd_bookshop.js
 # 签到领现金
-rm /ql/scripts/shufflewzc_faker2/jd_cash.js && wget -O /ql/scripts/yuannian1112_jd_scripts/jd_cash.js https://raw.githubusercontent.com/veip007/hj/main/jd/yuannian1112_jd_scripts/jd_cash.js
+wget -O /ql/scripts/shufflewzc_faker2/jd_cash.js https://raw.githubusercontent.com/veip007/hj/main/jd/shufflewzc_faker2/jd_cash.js && wget -O /ql/scripts/yuannian1112_jd_scripts/jd_cash.js https://raw.githubusercontent.com/veip007/hj/main/jd/yuannian1112_jd_scripts/jd_cash.js
 # 京喜工厂
 rm /ql/scripts/shufflewzc_faker2/jd_dreamFactory.js && wget -O /ql/scripts/yuannian1112_jd_scripts/jd_dreamFactory.js https://raw.githubusercontent.com/veip007/hj/main/jd/yuannian1112_jd_scripts/jd_dreamFactory.js
 # 东东农场
