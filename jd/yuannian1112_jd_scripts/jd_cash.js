@@ -5,7 +5,7 @@
 更新时间：2021-06-07
 已支持IOS双京东账号,Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
-cron "32 0,1,2 * * *" jd_cash.js
+cron "2 0-23/4 * * *" jd_cash.js
  */
 const $ = new Env('签到领现金');
 const notify = $.isNode() ? require('./sendNotify') : '';
