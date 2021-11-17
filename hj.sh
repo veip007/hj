@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.0.14"
+sh_ver="2.0.15"
 
 
 
@@ -192,10 +192,11 @@ case "$num" in
 	;;
 	18)
 	warp
+	;;
 	19)
 	Nginx	
 	;;
 	*)
-	echo "请输入正确数字 [0-18]"
+	echo "请输入正确数字 [0-19]"
 	;;
 esac
