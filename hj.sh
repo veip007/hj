@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.0.13"
+sh_ver="2.0.14"
 
 
 
@@ -84,7 +84,11 @@ bash <(curl -sSL "https://raw.githubusercontent.com/veip007/hj/main/trojan-go.sh
 xray(){
 bash <(curl -sSL "https://raw.githubusercontent.com/veip007/scripts/master/xray.sh")	
 }
-#18 Nginx进程守护
+#18 安装warp
+warp(){
+bash <(curl -sSL "https://cdn.jsdelivr.net/gh/fscarmen/warp/menu.sh") 	
+}
+#19 Nginx进程守护
 Nginx(){
 wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/hj/master/ng.sh && chmod +x ng.sh && crontab -l > conf && echo "*/1 * * * * ./ng.sh" >> conf && crontab conf && rm -f conf 	
 }
@@ -124,7 +128,8 @@ echo && echo -e "
  ${Green_font_prefix}15.${Font_color_suffix} Netflix解锁检测
  ${Green_font_prefix}16.${Font_color_suffix} trojan-go安装 
  ${Green_font_prefix}17.${Font_color_suffix} xray安装 
- ${Green_font_prefix}18.${Font_color_suffix} Nginx进程守护 
+ ${Green_font_prefix}18.${Font_color_suffix} 安装warp 
+ ${Green_font_prefix}19.${Font_color_suffix} Nginx进程守护 
   " && echo
 
 fi
@@ -186,6 +191,8 @@ case "$num" in
 	xray	
 	;;
 	18)
+	warp
+	19)
 	Nginx	
 	;;
 	*)
