@@ -19,5 +19,7 @@ wget -O /ql/scripts/shufflewzc_faker3/jd_plantBean.js https://github.com/veip007
 wget -O /ql/scripts/shufflewzc_faker3/jd_sgmh.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_sgmh.js && wget -O /ql/scripts/yuannian1112_jd_scripts/jd_sgmh.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_sgmh.js
 # 京喜财富岛
 wget -O /ql/scripts/he1pu_JDHelp/jd_cfd.js https://raw.githubusercontent.com/veip007/hj/main/jd/he1pu_JDHelp/jd_cfd.js
+#果园道家
+wget -O /ql/scripts/shufflewzc_faker3/jddj_fruit.js https://github.com/veip007/hj/raw/main/jd/faker3/jddj_fruit.js && wget -O /ql/scripts/yuannian1112_jd_scripts/jddj_fruit.js https://github.com/veip007/hj/raw/main/jd/faker3/jddj_fruit.js
 #删除下载日志
 rm /ql/scripts/wget*
