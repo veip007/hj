@@ -21,5 +21,9 @@ wget -O /ql/scripts/shufflewzc_faker3/jd_sgmh.js https://github.com/veip007/hj/r
 wget -O /ql/scripts/he1pu_JDHelp/jd_cfd.js https://raw.githubusercontent.com/veip007/hj/main/jd/he1pu_JDHelp/jd_cfd.js
 #果园道家
 wget -O /ql/scripts/shufflewzc_faker3/jddj_fruit.js https://github.com/veip007/hj/raw/main/jd/faker3/jddj_fruit.js && wget -O /ql/scripts/yuannian1112_jd_scripts/jddj_fruit.js https://github.com/veip007/hj/raw/main/jd/faker3/jddj_fruit.js
+#极速版
+wget -O /ql/scripts/yuannian1112_jd_scripts/jd_speed_redpocke.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_speed_redpocke.js
+wget -O /ql/scripts/yuannian1112_jd_scripts/jd_speed_signfaker.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_speed_signfaker.js
+wget -O /ql/scripts/yuannian1112_jd_scripts/jd_speed_signfree.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_speed_signfree.js
 #删除下载日志
 rm /ql/scripts/wget*
