@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.0.15"
+sh_ver="2.0.16"
 
 
 
@@ -72,23 +72,27 @@ open_bbr(){
 ls_color(){
 	wget https://raw.githubusercontent.com/veip007/hj/master/bashrc && mv /root/bashrc /root/.bashrc
 }
-#15 Netflix解锁检测
+#15更改为中国时区(24h制,重启生效)
+timezone(){
+	cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && hwclock -w && echo "alias date='date "+%a %b %d %H:%M:%S %Z %Y"'" >>~/.bashrc 
+}
+#16 Netflix解锁检测
 netflix(){
 bash <(curl -sSL "https://github.com/veip007/Netflix_Unlock_Information/raw/main/netflix.sh")	
 }
-#16 trojan-go
+#17 trojan-go
 trojan-go(){
 bash <(curl -sSL "https://raw.githubusercontent.com/veip007/hj/main/trojan-go.sh")	
 }
-#17 xray
+#18 xray
 xray(){
 bash <(curl -sSL "https://raw.githubusercontent.com/veip007/scripts/master/xray.sh")	
 }
-#18 安装warp
+#19 安装warp
 warp(){
 bash <(curl -sSL "https://cdn.jsdelivr.net/gh/fscarmen/warp/menu.sh") 	
 }
-#19 Nginx进程守护
+#20 Nginx进程守护
 Nginx(){
 wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/hj/master/ng.sh && chmod +x ng.sh && crontab -l > conf && echo "*/1 * * * * ./ng.sh" >> conf && crontab conf && rm -f conf 	
 }
@@ -124,17 +128,18 @@ echo && echo -e "
  ——————————————————
  ${Green_font_prefix}13.${Font_color_suffix} 一键开启默认bbr  
  ${Green_font_prefix}14.${Font_color_suffix} 改ls颜色(debian)
+ ${Green_font_prefix}15.${Font_color_suffix} 更改为中国时区(24h制,重启生效)
  ——————————————————
- ${Green_font_prefix}15.${Font_color_suffix} Netflix解锁检测
- ${Green_font_prefix}16.${Font_color_suffix} trojan-go安装 
- ${Green_font_prefix}17.${Font_color_suffix} xray安装 
- ${Green_font_prefix}18.${Font_color_suffix} 安装warp 
- ${Green_font_prefix}19.${Font_color_suffix} Nginx进程守护 
+ ${Green_font_prefix}16.${Font_color_suffix} Netflix解锁检测
+ ${Green_font_prefix}17.${Font_color_suffix} trojan-go安装 
+ ${Green_font_prefix}18.${Font_color_suffix} xray安装 
+ ${Green_font_prefix}19.${Font_color_suffix} 安装warp 
+ ${Green_font_prefix}20.${Font_color_suffix} Nginx进程守护 
   " && echo
 
 fi
 echo
-read -e -p " 请输入数字 [0-18]:" num
+read -e -p " 请输入数字 [0-20]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -182,21 +187,24 @@ case "$num" in
 	ls_color
 	;;
 	15)
-	netflix	
+	timezone
 	;;
 	16)
-	trojan-go	
+	netflix	
 	;;
 	17)
-	xray	
+	trojan-go	
 	;;
 	18)
-	warp
+	xray	
 	;;
 	19)
+	warp
+	;;
+	20)
 	Nginx	
 	;;
 	*)
-	echo "请输入正确数字 [0-19]"
+	echo "请输入正确数字 [0-20]"
 	;;
 esac
