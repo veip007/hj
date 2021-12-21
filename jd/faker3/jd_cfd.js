@@ -14,7 +14,7 @@ cron 1 0,6-23 * * * jd_cfd.js
 ================Loon==============
 [Script]
 cron "1 0,6-23 * * *" script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_cfd.js,tag=京喜财富岛
-
+ 
 ===============Surge=================
 京喜财富岛 = type=cron,cronexp="1 0,6-23 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_cfd.js
 
