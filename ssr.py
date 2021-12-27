@@ -20,5 +20,4 @@ with open(os.path.join(out_file_path, 'ssr.txt'), 'a+', encoding='utf-8') as fn:
 #    _text = '\n'.join(base64_tmp)
 #    fn.write(base64.b64encode(_text.encode('utf-8')).decode('utf-8'))
 #以上注释为不生成base64格式的txt
-# 去广告
-find /www/wwwroot/www.lefu.men/ -name 'ssr.txt' | xargs perl -pi -e 's|#github.com/v2rayfree|#lefu.men 乐福门|g'
+
