@@ -42,12 +42,12 @@ const randomCount = $.isNode() ? 20 : 5;
 let tuanActiveId = ``, hasSend = false;
 const jxOpenUrl = `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%20%22des%22:%20%22m%22,%20%22url%22:%20%22https://wqsd.jd.com/pingou/dream_factory/index.html%22%20%7D`;
 let cookiesArr = [], cookie = '', message = '', allMessage = '';
-const inviteCodes = [
-  'myqCJoewLg3Oo6tH0_XMAg==@yXs3HFVEaoncQr_CGkNZLA==@m1NliKj2knALYwrFf8gANA==@r21pjYv4pYiywPFnFA3ySw==@W4Am8CCM4tfHU8xyt4cw2w==',
-  'myqCJoewLg3Oo6tH0_XMAg==@yXs3HFVEaoncQr_CGkNZLA==@m1NliKj2knALYwrFf8gANA==@r21pjYv4pYiywPFnFA3ySw==@W4Am8CCM4tfHU8xyt4cw2w==',
-  'myqCJoewLg3Oo6tH0_XMAg==@yXs3HFVEaoncQr_CGkNZLA==@m1NliKj2knALYwrFf8gANA==@r21pjYv4pYiywPFnFA3ySw==@W4Am8CCM4tfHU8xyt4cw2w==',
-  'myqCJoewLg3Oo6tH0_XMAg==@yXs3HFVEaoncQr_CGkNZLA==@m1NliKj2knALYwrFf8gANA==@r21pjYv4pYiywPFnFA3ySw==@W4Am8CCM4tfHU8xyt4cw2w==',
-];
+const inviteCodes = [ 
+ 'myqCJoewLg3Oo6tH0_XMAg==@yXs3HFVEaoncQr_CGkNZLA==@m1NliKj2knALYwrFf8gANA==@r21pjYv4pYiywPFnFA3ySw==@W4Am8CCM4tfHU8xyt4cw2w==', 
+ 'myqCJoewLg3Oo6tH0_XMAg==@yXs3HFVEaoncQr_CGkNZLA==@m1NliKj2knALYwrFf8gANA==@r21pjYv4pYiywPFnFA3ySw==@W4Am8CCM4tfHU8xyt4cw2w==', 
+ 'myqCJoewLg3Oo6tH0_XMAg==@yXs3HFVEaoncQr_CGkNZLA==@m1NliKj2knALYwrFf8gANA==@r21pjYv4pYiywPFnFA3ySw==@W4Am8CCM4tfHU8xyt4cw2w==', 
+ 'myqCJoewLg3Oo6tH0_XMAg==@yXs3HFVEaoncQr_CGkNZLA==@m1NliKj2knALYwrFf8gANA==@r21pjYv4pYiywPFnFA3ySw==@W4Am8CCM4tfHU8xyt4cw2w==', 
+ ]; 
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 $.tuanIds = [];
 $.appId = 10001;
@@ -67,7 +67,7 @@ if ($.isNode()) {
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
     return;
   }
-  await requestAlgo(); 
+  await requestAlgo();
   await getActiveId();//自动获取每期拼团活动ID
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {
