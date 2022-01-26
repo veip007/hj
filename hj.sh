@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.0.16"
+sh_ver="2.0.17"
 
 
 
@@ -74,7 +74,7 @@ ls_color(){
 }
 #15更改为中国时区(24h制,重启生效)
 timezone(){
-	cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && hwclock -w && echo "alias date='date "+%a %b %d %H:%M:%S %Z %Y"'" >>~/.bashrc 
+	cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && hwclock -w && echo $(curl -sSL "https://github.com/veip007/hj/raw/main/time") >> ~/.bashrc 
 }
 #16 Netflix解锁检测
 netflix(){
