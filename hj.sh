@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.0.17"
+sh_ver="2.0.18"
 
 
 
@@ -96,6 +96,10 @@ bash <(curl -sSL "https://cdn.jsdelivr.net/gh/fscarmen/warp/menu.sh")
 Nginx(){
 wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/hj/master/ng.sh && chmod +x ng.sh && crontab -l > conf && echo "*/1 * * * * ./ng.sh" >> conf && crontab conf && rm -f conf 	
 }
+#21 Hysteria安装
+Hysteria(){
+bash <(curl -sSL "https://raw.githubusercontent.com/emptysuns/Hi_Hysteria/main/server/install.sh") 
+}
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -135,11 +139,12 @@ echo && echo -e "
  ${Green_font_prefix}18.${Font_color_suffix} xray安装 
  ${Green_font_prefix}19.${Font_color_suffix} 安装warp 
  ${Green_font_prefix}20.${Font_color_suffix} Nginx进程守护 
+ ${Green_font_prefix}21.${Font_color_suffix} Hysteria安装
   " && echo
 
 fi
 echo
-read -e -p " 请输入数字 [0-20]:" num
+read -e -p " 请输入数字 [0-21]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -204,7 +209,10 @@ case "$num" in
 	20)
 	Nginx	
 	;;
+	21)
+	Hysteria	
+	;;
 	*)
-	echo "请输入正确数字 [0-20]"
+	echo "请输入正确数字 [0-21]"
 	;;
 esac
