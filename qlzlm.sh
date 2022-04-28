@@ -10,7 +10,7 @@ wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_dreamFactory_Mod.js https://g
 # 东东农场
 wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_fruit.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_fruit.js && wget -O /root/ql/scripts/okyyds_yydspure_master/jd_fruit.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_fruit.js && wget -O /root/ql/scripts/yuannian1112_jd_scripts/jd_fruit.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_fruit.js
 # 东东健康社区
-wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_health.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_health.js && wget -O /root/ql/scripts/okyyds_yydspure_master/jd_health.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_health.js 
+wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_health.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_health_help.js && wget -O /root/ql/scripts/okyyds_yydspure_master/jd_health.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_health_help.js 
 # 东东萌宠
 wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_pet.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_pet.js && wget -O /root/ql/scripts/okyyds_yydspure_master/jd_pet.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_pet.js && wget -O /root/ql/scripts/yuannian1112_jd_scripts/jd_pet.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_pet.js
 # 京东种豆得豆
