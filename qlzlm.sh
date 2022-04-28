@@ -27,5 +27,4 @@ wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_cfd.js https://github.com/vei
 #wget -O /root/ql/scripts/yuannian1112_jd_scripts/jd_speed_redpocke.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_speed_redpocke.js
 #wget -O /root/ql/scripts/yuannian1112_jd_scripts/jd_speed_signfaker.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_speed_signfaker.js
 #wget -O /root/ql/scripts/yuannian1112_jd_scripts/jd_speed_signfree.js https://github.com/veip007/hj/raw/main/jd/faker3/jd_speed_signfree.js
-#删除下载日志
-rm /root/ql/scripts/wget*
+
