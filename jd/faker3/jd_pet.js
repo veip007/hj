@@ -24,24 +24,20 @@ cron "15 6-18/6 * * *" script-path=jd_pet.js,tag=东东萌宠
 东东萌宠 = type=cron,script-path=jd_pet.js, cronexpr="15 6-18/6 * * *", timeout=3600, enable=true
 
  */
-const $ = new Env('东东萌宠_内部互助');
+const $ = new Env('东东萌宠互助版');
 let cookiesArr = [], cookie = '', jdPetShareArr = [], isBox = false, allMessage = '';
-//助力好友分享码(最多5个,否则后面的助力失败),原因:京东农场每人每天只有四次助力机会
-//此此内容是IOS用户下载脚本到本地使用，填写互助码的地方，同一京东账号的好友互助码请使用@符号隔开。
-//下面给出两个账号的填写示例（iOS只支持2个京东账号）
-let shareCodes = [ // IOS本地脚本用户这个列表填入你要助力的好友的shareCode
-  //账号一的好友shareCode,不同好友的shareCode中间用@符号隔开
-  'MTE0MzE5NjEzMDAwMDAwMDQ3MDk1OTQx@MTE0MDQ3MzEwMDAwMDAwNDczNDg4ODc=@MTE0MDQ3MzEwMDAwMDAwNDczNzYyNjc=@MTAxODc2NTEzMDAwMDAwMDAyMDA1MTQwNQ==@MTAxODc2NTEzNTAwMDAwMDAwNTI4NTg0MQ==',
-  //账号二的好友shareCode,不同好友的shareCode中间用@符号隔开
-  'MTE0MzE5NjEzMDAwMDAwMDQ3MDk1OTQx@MTE0MDQ3MzEwMDAwMDAwNDczNDg4ODc=@MTE0MDQ3MzEwMDAwMDAwNDczNzYyNjc=@MTAxODc2NTEzMDAwMDAwMDAyMDA1MTQwNQ==@MTAxODc2NTEzNTAwMDAwMDAwNTI4NTg0MQ==',
-]
 let message = '', subTitle = '', option = {};
 let jdNotify = false; //是否关闭通知，false打开通知推送，true关闭通知推送
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 let goodsUrl = '', taskInfoKey = [];
 let notify = $.isNode() ? require('./sendNotify') : '';
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-let newShareCodes = [];
+let newShareCodes = [// IOS本地脚本用户这个列表填入你要助力的好友的shareCode
+  //账号一的好友shareCode,不同好友的shareCode中间用@符号隔开
+  'MTE0MzE5NjEzMDAwMDAwMDQ3MDk1OTQx@MTE0MDQ3MzEwMDAwMDAwNDczNDg4ODc=@MTE0MDQ3MzEwMDAwMDAwNDczNzYyNjc=@MTAxODc2NTEzMDAwMDAwMDAyMDA1MTQwNQ==@MTAxODc2NTEzNTAwMDAwMDAwNTI4NTg0MQ==',
+  //账号二的好友shareCode,不同好友的shareCode中间用@符号隔开
+  'MTE0MzE5NjEzMDAwMDAwMDQ3MDk1OTQx@MTE0MDQ3MzEwMDAwMDAwNDczNDg4ODc=@MTE0MDQ3MzEwMDAwMDAwNDczNzYyNjc=@MTAxODc2NTEzMDAwMDAwMDAyMDA1MTQwNQ==@MTAxODc2NTEzNTAwMDAwMDAwNTI4NTg0MQ==',
+];
 let NoNeedCodes = [];
 if ($.isNode()) {
     Object.keys(jdCookieNode).forEach((item) => {
@@ -54,6 +50,29 @@ if ($.isNode()) {
 } else {
     cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
+
+let NowHour = new Date().getHours();
+let llhelp=true;
+if ($.isNode() && process.env.CC_NOHELPAFTER8) {
+	console.log(NowHour);
+	if (process.env.CC_NOHELPAFTER8=="true"){
+		if (NowHour>8){
+			llhelp=false;
+			console.log(`现在是9点后时段，不启用互助....`);
+		}			
+	}	
+}
+let WP_APP_TOKEN_ONE = "";
+if ($.isNode()) {
+	if (process.env.WP_APP_TOKEN_ONE) {		
+		WP_APP_TOKEN_ONE = process.env.WP_APP_TOKEN_ONE;
+	}
+}
+if(WP_APP_TOKEN_ONE)
+	console.log(`检测到已配置Wxpusher的Token，启用一对一推送...`);
+else
+	console.log(`检测到未配置Wxpusher的Token，禁用一对一推送...`);
+	
 console.log(`共${cookiesArr.length}个京东账号\n`);
 
 !(async() => {
@@ -63,36 +82,38 @@ console.log(`共${cookiesArr.length}个京东账号\n`);
         });
         return;
     }
-    console.log('开始收集您的互助码，用于账号内部互助，请稍等...');
-    for (let i = 0; i < cookiesArr.length; i++) {
-        if (cookiesArr[i]) {
-            cookie = cookiesArr[i];
-            $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1]);
-            $.index = i + 1;
-            $.isLogin = true;
-            $.nickName = '';
-            await TotalBean();
+	if (llhelp){
+		console.log('开始收集您的互助码，用于账号内部互助，请稍等...');
+		for (let i = 0; i < cookiesArr.length; i++) {
+			if (cookiesArr[i]) {
+				cookie = cookiesArr[i];
+				$.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1]);
+				$.index = i + 1;
+				$.isLogin = true;
+				$.nickName = '';
+				await TotalBean();
 
-            if (!$.isLogin) {
-                $.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/bean/signIndex.action`, {
-                    "open-url": "https://bean.m.jd.com/bean/signIndex.action"
-                });
+				if (!$.isLogin) {
+					$.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/bean/signIndex.action`, {
+						"open-url": "https://bean.m.jd.com/bean/signIndex.action"
+					});
 
-                if ($.isNode()) {
-                    await notify.sendNotify(`${$.name}cookie已失效 - ${$.UserName}`, `京东账号${$.index} ${$.UserName}\n请重新登录获取cookie`);
-                }
-                continue;
-            }
-            message = '';
-            subTitle = '';
-            goodsUrl = '';
-            taskInfoKey = [];
-            option = {};
-            await GetShareCode();
-        }
-    }
+					if ($.isNode()) {
+						await notify.sendNotify(`${$.name}cookie已失效 - ${$.UserName}`, `京东账号${$.index} ${$.UserName}\n请重新登录获取cookie`);
+					}
+					continue;
+				}
+				message = '';
+				subTitle = '';
+				goodsUrl = '';
+				taskInfoKey = [];
+				option = {};
+				await GetShareCode();
+			}
+		}
+		console.log('\n互助码收集完毕，开始执行日常任务...\n');
+	}
 	
-	console.log('\n互助码收集完毕，开始执行日常任务...\n');
     for (let i = 0; i < cookiesArr.length; i++) {
         if (cookiesArr[i]) {
             cookie = cookiesArr[i];
@@ -160,6 +181,9 @@ async function jdPet() {
                 if ($.isNode()) {
                     await notify.sendNotify(`${$.name} - 账号${$.index} - ${$.nickName || $.UserName}奖品已可领取`, `京东账号${$.index} ${$.nickName || $.UserName}\n${$.petInfo.goodsInfo.goodsName}已可领取`);
                 }
+				if ($.isNode() && WP_APP_TOKEN_ONE) {
+					await notify.sendNotifybyWxPucher($.name, `【提醒⏰】${$.petInfo.goodsInfo.goodsName}已可领取\n【领取步骤】京东->我的->东东萌宠兑换京东红包,可以用于京东app的任意商品.`, `${$.UserName}`);
+				}
                 return
             } else if ($.petInfo.petStatus === 6) {
                 await slaveHelp(); //已领取红包,但未领养新的,也能继续助力好友
@@ -168,6 +192,7 @@ async function jdPet() {
                 if ($.isNode()) {
                     await notify.sendNotify(`${$.name} - 账号${$.index} - ${$.nickName || $.UserName}奖品已可领取`, `京东账号${$.index} ${$.nickName || $.UserName}\n已领取红包,但未继续领养新的物品`);
                 }
+				
                 return
             }
             //console.log(`\n【京东账号${$.index}（${$.UserName}）的${$.name}好友互助码】${$.petInfo.shareCode}\n`);
@@ -179,7 +204,9 @@ async function jdPet() {
             $.taskInfo = $.taskInit.result;
 			
             await petSport(); //遛弯
-            await slaveHelp(); //助力好友
+			if (llhelp){
+				await slaveHelp(); //助力好友
+			}
             await masterHelpInit(); //获取助力的信息
             await doTask(); //做日常任务
             await feedPetsAgain(); //再次投食
