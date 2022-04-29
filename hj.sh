@@ -134,7 +134,7 @@ echo && echo -e "
  ${Green_font_prefix} 6.${Font_color_suffix} 回程线路测试:命令:./huicheng 您的IP
  —————————代理类—————————
  ${Green_font_prefix} 11.${Font_color_suffix} 安装V2ary_233一键
- ${Green_font_prefix} 12.${Font_color_suffix} V2八合一脚本
+ ${Green_font_prefix} 12.${Font_color_suffix} V2八合一脚本快捷命令：vasma
  ${Green_font_prefix} 13.${Font_color_suffix} xray安装 
  ${Green_font_prefix} 14.${Font_color_suffix} 安装SSR多用户版
  ${Green_font_prefix} 15.${Font_color_suffix} trojan-go安装
