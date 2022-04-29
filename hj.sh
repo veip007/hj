@@ -153,7 +153,6 @@ echo && echo -e "
  ${Green_font_prefix} 44.${Font_color_suffix} 傻瓜式一键DD包（GD源）
  ${Green_font_prefix} 44.${Font_color_suffix} Netflix解锁检测
 " && echo
-
 fi
 echo
 read -e -p " 请输入数字 [0-44]:" num
