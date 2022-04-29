@@ -151,11 +151,11 @@ echo && echo -e "
  ${Green_font_prefix} 42.${Font_color_suffix} 云监控
  ${Green_font_prefix} 43.${Font_color_suffix} 傻瓜式一键DD包（OD源）
  ${Green_font_prefix} 44.${Font_color_suffix} 傻瓜式一键DD包（GD源）
- ${Green_font_prefix} 44.${Font_color_suffix} Netflix解锁检测
+ ${Green_font_prefix} 45.${Font_color_suffix} Netflix解锁检测
 " && echo
 fi
 echo
-read -e -p " 请输入数字 [0-44]:" num
+read -e -p " 请输入数字 [0-45]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -230,6 +230,6 @@ case "$num" in
 	netflix
 	;;
 	*)
-	echo "请输入正确数字 [0-44]"
+	echo "请输入正确数字 [0-45]"
 	;;
 esac
