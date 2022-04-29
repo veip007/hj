@@ -187,6 +187,7 @@ case "$num" in
 	;;
 	13)
 	xray
+	;;
 	14)
 	Install_ssr
 	;;
