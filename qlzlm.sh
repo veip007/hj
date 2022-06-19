@@ -1,4 +1,6 @@
 #!/bin/bash
+#检测CK
+wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_CheckCK.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_CheckCK.js && wget -O /root/ql/scripts/okyyds_yydspure_master/jd_CheckCK.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_CheckCK.js
 # 东东工厂
 #wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_jdfactory.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_jdfactory.js && wget -O /root/ql/scripts/yuannian1112_jd_scripts/jd_jdfactory.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_jdfactory.js
 # 口袋书店
