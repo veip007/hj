@@ -27,6 +27,19 @@ ffmpeg -i https://http://example.com/index.m3u8 -c:v copy abc.mp4
 ```
 自行更改连接和文件名
 
+生成预览图
+```bash
+ffmpeg  -i input.mp4 -r 0.0033 -vf scale=-1:720 -vcodec png capture-%003d.png
+```
+其中input.mp4是需要生成预览图的视频
+
+0.0033是间隔时间比率，这个数越小代表间隔时间越长，0.0033代表每5分钟左右截一张图片，如果调成0.0023大概就是7分钟一张图片
+
+-1:720代表生成图片短边的长度，这里就是 ? x 720, ? 取决于视频的比例
+
+capture-%003d.png代表文件名，生成的文件就以capture-001.png，capture-002.png.....为文件名，如果设置成capture-%002d.png，则文件名就是capture-01.png，capture-02.png.....
+
+
 ### nginx子目录密码访问
 1.运行下面脚本
 ```bash
