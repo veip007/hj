@@ -1,6 +1,4 @@
 #!/bin/bash
-#检测CK
-wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_CheckCK.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_CheckCK.js && wget -O /root/ql/scripts/okyyds_yydspure_master/jd_CheckCK.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_CheckCK.js
 # 东东工厂
 #wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_jdfactory.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_jdfactory.js && wget -O /root/ql/scripts/yuannian1112_jd_scripts/jd_jdfactory.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_jdfactory.js
 # 口袋书店
@@ -23,9 +21,5 @@ wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_speed_sign.js https://raw.git
 #wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_sgmh.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_sgmh.js && wget -O /root/ql/scripts/yuannian1112_jd_scripts/jd_sgmh.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_sgmh.js
 # 京喜财富岛
 wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_cfd.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_cfd.js && wget -O /root/ql/scripts/okyyds_yydspure_master/jd_cfd.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_cfd.js && wget -O /root/ql/scripts/yuannian1112_jd_scripts/jd_cfd.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_cfd.js
-#果园道家
-#wget -O /root/ql/scripts/shufflewzc_faker3_main/jddj_fruit.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jddj_fruit.js && wget -O /root/ql/scripts/yuannian1112_jd_scripts/jddj_fruit.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jddj_fruit.js
 #极速版
-#wget -O /root/ql/scripts/yuannian1112_jd_scripts/jd_speed_redpocke.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_speed_redpocke.js
-#wget -O /root/ql/scripts/yuannian1112_jd_scripts/jd_speed_signfaker.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_speed_signfaker.js
-#wget -O /root/ql/scripts/yuannian1112_jd_scripts/jd_speed_signfree.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_speed_signfree.js
+wget -O /root/ql/scripts/shufflewzc_faker3_main/jd_speed_signfree.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_speed_signfree.js
