@@ -1,6 +1,10 @@
 #!/bin/bash
 # 东东农场内部互助
 wget -O /root/ql/data/scripts/shufflewzc_faker3/jd_fruit_help.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_fruit_help.js
+#农场集勋章
+wget -O /root/ql/data/scripts/shufflewzc_faker3/NoUsed_jd_medal_Mod.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/NoUsed_jd_medal_Mod.js
+#plus专属礼-天天领福利
+wget -O /root/ql/data/scripts/shufflewzc_faker3/jd_jingBeanReceive.py https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_jingBeanReceive.py
 # 东东农场好友删减
 wget -O /root/ql/data/scripts/shufflewzc_faker3/jd_fruit_friend.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_fruit_friend.js
 # 东东农场日常任务
