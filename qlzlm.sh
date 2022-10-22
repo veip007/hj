@@ -1,8 +1,8 @@
 #!/bin/bash
 # 东东农场内部互助
-#wget -O /root/ql/data/scripts/shufflewzc_faker3/jd_fruit_help.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_fruit_help.js
+wget -O /root/ql/data/scripts/shufflewzc_faker3/jd_fruit_help.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_fruit_help.js
 # 东东农场好友删减
-#wget -O /root/ql/data/scripts/shufflewzc_faker3/jd_fruit_friend.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_fruit_friend.js
+wget -O /root/ql/data/scripts/shufflewzc_faker3/jd_fruit_friend.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_fruit_friend.js
 # 东东农场日常任务
 wget -O /root/ql/data/scripts/shufflewzc_faker3/jd_fruit_task.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_fruit_task.js
 # 种豆得豆
