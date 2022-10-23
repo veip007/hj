@@ -1,6 +1,8 @@
 #!/bin/bash
 # 东东农场内部互助
 wget -O /root/ql/data/scripts/shufflewzc_faker3/jd_fruit_help.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_fruit_help.js
+#极速版我是大老板农场
+wget -O /root/ql/data/scripts/shufflewzc_faker3/jd_wsdlb.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/jd_wsdlb.js
 #农场集勋章
 wget -O /root/ql/data/scripts/ccwav_QLScript2/NoUsed_jd_medal_Mod.js https://raw.githubusercontent.com/veip007/hj/main/jd/faker3/NoUsed_jd_medal_Mod.js
 #plus专属礼-天天领福利
