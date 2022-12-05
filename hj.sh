@@ -55,7 +55,7 @@ Install_V2ray(){
 }
 #12 V2八合一脚本
 v2_8(){
-	bash <(curl -s -L https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/veip007/v2ray-agent/master/install.sh)
 }
 #13 xray
 xray(){
