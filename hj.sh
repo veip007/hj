@@ -83,7 +83,7 @@ bash <(curl -sSL "https://raw.githubusercontent.com/emptysuns/Hi_Hysteria/main/s
 }
 #19 安装warp
 warp(){
-bash <(curl -sSL "https://cdn.jsdelivr.net/gh/fscarmen/warp/menu.sh")
+bash <(curl -sSL "https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh")
 }
 #—————————加速类—————————
 #31一键开启默认bbr
