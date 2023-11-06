@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.1.3"
+sh_ver="2.1.4"
 
 
 
@@ -16,7 +16,7 @@ Update_Shell(){
 	echo -e "脚本已更新为最新版本[ ${sh_new_ver} ] !(注意：因为更新方式为直接覆盖当前运行的脚本，所以可能下面会提示一些报错，无视即可)" && exit 0
 }
 #—————————系统类—————————
-#1改ls颜色(debian)
+#3改ls颜色(debian)
 ls_color(){
 	wget https://raw.githubusercontent.com/veip007/hj/master/bashrc && mv /root/bashrc /root/.bashrc
 }
@@ -24,7 +24,7 @@ ls_color(){
 timezone(){
 	cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && hwclock -w && echo $(curl -sSL "https://github.com/veip007/hj/raw/main/time") >> ~/.bashrc 
 }
-#3安装系统依赖
+#1安装系统依赖
 yl(){
 	apt update && apt list --upgradable && apt install -y wget && apt install -y curl && apt install -y vim
 }
@@ -83,7 +83,7 @@ bash <(curl -sSL "https://raw.githubusercontent.com/emptysuns/Hi_Hysteria/main/s
 }
 #19 安装warp
 warp(){
-bash <(curl -sSL "https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh")
+bash <(curl -sSL "https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh")
 }
 #—————————加速类—————————
 #31一键开启默认bbr
@@ -119,6 +119,14 @@ DD_GD(){
 netflix(){
 bash <(curl -sSL "https://github.com/veip007/Netflix_Unlock_Information/raw/main/netflix.sh")	
 }
+#46 去除宝塔登录入口
+bt1(){
+rm -f /www/server/panel/data/admin_path.pl	
+}
+#47 卸载宝塔
+bt2(){
+bash <(curl -sSL "http://download.bt.cn/install/bt-uninstall.sh")
+}
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -134,8 +142,8 @@ echo && echo -e "
   
  ${Green_font_prefix} 0.${Font_color_suffix} 升级脚本
  ——————————————————1.系统类——————————————————
- ${Green_font_prefix} 1.${Font_color_suffix} 改ls颜色(debian)        ${Green_font_prefix} 2.${Font_color_suffix} 更改为中国时区(24h制,重启生效)
- ${Green_font_prefix} 3.${Font_color_suffix} 安装系统依赖            ${Green_font_prefix} 4.${Font_color_suffix} Nginx进程守护
+ ${Green_font_prefix} 1.${Font_color_suffix} 安装系统依赖            ${Green_font_prefix} 2.${Font_color_suffix} 更改为中国时区(24h制,重启生效)
+ ${Green_font_prefix} 3.${Font_color_suffix} 改ls颜色(debian)        ${Green_font_prefix} 4.${Font_color_suffix} Nginx进程守护
  ${Green_font_prefix} 5.${Font_color_suffix} 小鸡性能测试            ${Green_font_prefix} 6.${Font_color_suffix} 回程线路测试:命令:./huicheng 您的IP
  ${Green_font_prefix} 7.${Font_color_suffix} docker安装              ${Green_font_prefix} 8.${Font_color_suffix} screen安装
  ——————————————————2.代理类——————————————————
@@ -150,22 +158,23 @@ echo && echo -e "
  ——————————————————4.辅助类——————————————————
  ${Green_font_prefix} 41.${Font_color_suffix} 安装Aria2              ${Green_font_prefix} 42.${Font_color_suffix} 云监控
  ${Green_font_prefix} 43.${Font_color_suffix} 傻瓜式一键DD包(OD源)   ${Green_font_prefix} 44.${Font_color_suffix} 傻瓜式一键DD包(GD源)
- ${Green_font_prefix} 45.${Font_color_suffix} Netflix解锁检测
+ ${Green_font_prefix} 45.${Font_color_suffix} Netflix解锁检测		 ${Green_font_prefix} 46.${Font_color_suffix} 去除宝塔登录入口
+ ${Green_font_prefix} 47.${Font_color_suffix} 卸载宝塔		 
 " && echo
 fi
 echo
-read -e -p " 请输入数字 [0-45]:" num
+read -e -p " 请输入数字 [0-47]:" num
 case "$num" in
 	0)
 	Update_Shell
 	;;
-	1)
+	3)
 	ls_color
 	;;
 	2)
 	timezone
 	;;
-	3)
+	1)
 	yl
 	;;
 	4)
@@ -234,7 +243,13 @@ case "$num" in
 	45)
 	netflix
 	;;
+	46)
+	bt1
+	;;
+	47)
+	bt2
+	;;
 	*)
-	echo "请输入正确数字 [0-45]"
+	echo "请输入正确数字 [0-47]"
 	;;
 esac
