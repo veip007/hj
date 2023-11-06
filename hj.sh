@@ -158,7 +158,7 @@ echo && echo -e "
  ——————————————————4.辅助类——————————————————
  ${Green_font_prefix} 41.${Font_color_suffix} 安装Aria2              ${Green_font_prefix} 42.${Font_color_suffix} 云监控
  ${Green_font_prefix} 43.${Font_color_suffix} 傻瓜式一键DD包(OD源)   ${Green_font_prefix} 44.${Font_color_suffix} 傻瓜式一键DD包(GD源)
- ${Green_font_prefix} 45.${Font_color_suffix} Netflix解锁检测		 ${Green_font_prefix} 46.${Font_color_suffix} 去除宝塔登录入口
+ ${Green_font_prefix} 45.${Font_color_suffix} Netflix解锁检测        ${Green_font_prefix} 46.${Font_color_suffix} 去除宝塔登录入口
  ${Green_font_prefix} 47.${Font_color_suffix} 卸载宝塔		 
 " && echo
 fi
