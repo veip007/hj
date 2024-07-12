@@ -117,7 +117,7 @@ DD_GD(){
 }
 #45 Netflix解锁检测
 netflix(){
-bash <(curl -sSL "https://github.com/veip007/Netflix_Unlock_Information/raw/main/netflix.sh")	
+bash <(curl -sSL "https://github.com/cokemine/Netflix_Unlock_Information/raw/main/netflix.sh")	
 }
 #46 去除宝塔登录入口
 bt1(){
