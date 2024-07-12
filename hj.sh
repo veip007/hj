@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 
-sh_ver="2.1.4"
+sh_ver="2.1.5"
 
 
 
@@ -105,7 +105,7 @@ Aria2(){
 }
 #42安装云监控
 Install_status(){
-	bash <(curl -s -L https://raw.githubusercontent.com/veip007/doubi/master/status.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/veip007/ServerStatus-Hotaru/master/status.sh)
 }
 #43一键DD包（OD源）
 DD_OD(){
